@@ -1,1 +1,10 @@
-
+services:
+  - name: telegram-auto-caption-bot
+    ports:
+      - port: 80
+        http: {}
+    env:
+      - name: TELEGRAM_BOT_TOKEN
+        secret: true
+    docker:
+      image: koyeb/app:telegram-auto-caption-bot
