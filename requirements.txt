@@ -1,6 +1,7 @@
 python-telegram-bot==20.3
+hachoir==3.2.0
+pymediainfo==6.0.1
 python-dotenv==1.0.0
-sqlalchemy==2.0.23
-Pillow==10.1.0
-python-magic==0.4.27
-gunicorn==21.2.0
+ffmpeg-python==0.2.0
+requests==2.31.0
+Jinja2==3.1.2
