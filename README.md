@@ -1,31 +1,37 @@
-# Telegram Auto Caption Bot
 
-Advanced auto caption bot for Telegram channels with support for dynamic variables.
+# Auto Caption Bot for Telegram Channels
+
+Automatically adds formatted captions to media files posted in Telegram channels.
 
 ## Features
 
-- Automatic caption generation for media files
-- Support for all common media types (photos, videos, documents, audio)
-- 20+ dynamic variables including:
-  - File metadata (`{filename}`, `{filesize}`, `{ext}`)
-  - Media info (`{duration}`, `{resolution}`, `{mime_type}`)
-  - Audio tags (`{title}`, `{artist}`)
-  - Time-based wishes (`{wish}`)
-  - File name patterns (`{language}`, `{year}`, `{quality}`)
+- Supports all standard media variables
+- Automatic metadata extraction
+- Customizable caption templates
+- Easy deployment
 
-## Setup
+## Variables Available
 
-1. Clone the repository
-2. Install requirements: `pip install -r requirements.txt`
-3. Create `.env` file from `.env.example`
-4. Run the bot: `python -m bot.main`
+- `{filename}` - File name
+- `{filesize}` - File size
+- `{caption}` - Original caption
+- `{language}` - Language from filename
+- `{year}` - Year from filename
+- `{quality}` - Quality from filename
+- `{season}` - Season from filename
+- `{episode}` - Episode from filename
+- `{duration}` - Duration from video
+- `{height}` - Video height
+- `{width}` - Video width
+- `{ext}` - File extension
+- `{resolution}` - Video resolution
+- `{mime_type}` - MIME type
+- `{title}` - Audio title
+- `{artist}` - Audio artist
+- `{wish}` - Time-based greeting
 
-## Usage
+## Deployment
 
-1. Add bot to your channel as admin with "Edit Messages" permission
-2. Set your caption template with `/setcaption`
-3. The bot will automatically update all media captions
-
-## Variables
-
-All available variables are listed in [VARIABLES.md](VARIABLES.md)-
+1. Create a new Web Service on Render
+2. Set environment variables from `.env.sample`
+3. Deploy!
